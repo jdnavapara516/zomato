@@ -1,0 +1,27 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Zomato{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'static/core/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'static/core/css/navbar.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    {% include "core/components/navbar.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "core/components/footer.html" %}
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

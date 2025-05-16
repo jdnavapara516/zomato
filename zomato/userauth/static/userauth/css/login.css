@@ -1,0 +1,66 @@
+
+.z-login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(34,34,34,0.07);
+    padding: 36px 32px 28px 32px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.z-login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e23744;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.z-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.z-login-form label {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.z-login-form input[type="text"],
+.z-login-form input[type="password"] {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+.z-login-form input[type="text"]:focus,
+.z-login-form input[type="password"]:focus {
+    border: 1.5px solid #e23744;
+}
+.z-login-btn {
+    padding: 12px 0;
+    background: #e23744;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.z-login-btn:hover {
+    background: #b71c2a;
+}
+.z-login-extra {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 1rem;
+}
+.z-login-extra a {
+    color: #e23744;
+    text-decoration: none;
+    font-weight: 500;
+}
+.z-login-extra a:hover {
+    text-decoration: underline;
+}

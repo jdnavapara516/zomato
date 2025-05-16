@@ -1,0 +1,66 @@
+
+.z-register-container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(34,34,34,0.07);
+    padding: 36px 32px 28px 32px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.z-register-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e23744;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.z-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.z-register-form label {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.z-register-form input[type="text"],
+.z-register-form input[type="email"],
+.z-register-form input[type="password"] {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+.z-register-form input:focus {
+    border: 1.5px solid #e23744;
+}
+.z-register-btn {
+    padding: 12px 0;
+    background: #e23744;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.z-register-btn:hover {
+    background: #b71c2a;
+}
+.z-register-extra {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 1rem;
+}
+.z-register-extra a {
+    color: #e23744;
+    text-decoration: none;
+    font-weight: 500;
+}
+.z-register-extra a:hover {
+    text-decoration: underline;
+}

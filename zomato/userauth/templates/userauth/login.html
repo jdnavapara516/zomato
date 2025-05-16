@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Zomato | Login{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'userauth/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/footer.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/navbar.css' %}">
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="z-login-container">
+    <div class="z-login-title">Login to Zomato</div>
+    <form class="z-login-form" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div>
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="z-login-btn">Login</button>
+    </form>
+    <div class="z-login-extra">
+        Don't have an account?
+        <a href="{% url 'register' %}">Sign Up</a>
+    </div>
+</div>
+{% endblock %}

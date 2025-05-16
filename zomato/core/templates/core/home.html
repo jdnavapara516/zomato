@@ -1,0 +1,74 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+
+{% block title %}Zomato | Home{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/footer.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/navbar.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<section class="z-hero">
+    <div class="z-hero-content">
+        <div class="z-hero-title">Discover the best food & drinks in your city</div>
+        <div class="z-hero-desc">Order from your favorite restaurants or explore new cuisines, all at your fingertips.</div>
+        <form class="z-search-bar" method="get" action="#">
+            <input type="text" placeholder="Search for restaurants, cuisines or dishes..." name="q" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</section>
+
+<section class="z-section">
+    <div class="z-section-title">Popular Categories</div>
+    <div class="z-cards">
+        <div class="z-card">
+            <img src="{% static 'core/images/pizza.jpeg' %}" alt="Pizza" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Pizza</div>
+                <div class="z-card-desc">Cheesy, delicious pizzas from top-rated outlets.</div>
+            </div>
+        </div>
+        <div class="z-card">
+            <img src="{% static 'core/images/burger.jpeg' %}" alt="Burgers" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Burgers</div>
+                <div class="z-card-desc">Juicy burgers with a variety of fillings and flavors.</div>
+            </div>
+        </div>
+        <div class="z-card">
+            <img src="{% static 'core/images/dessert.jpeg' %}" alt="Desserts" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Desserts</div>
+                <div class="z-card-desc">Indulge in cakes, pastries, and sweet treats.</div>
+            </div>
+        </div>
+        <div class="z-card">
+            <img src="{% static 'core/images/dessert.jpeg' %}" alt="Desserts" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Desserts</div>
+                <div class="z-card-desc">Indulge in cakes, pastries, and sweet treats.</div>
+            </div>
+        </div>
+        <div class="z-card">
+            <img src="{% static 'core/images/dessert.jpeg' %}" alt="Desserts" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Desserts</div>
+                <div class="z-card-desc">Indulge in cakes, pastries, and sweet treats.</div>
+            </div>
+        </div>
+        <div class="z-card">
+            <img src="{% static 'core/images/chinese.jpeg' %}" alt="Chinese" class="z-card-img">
+            <div class="z-card-content">
+                <div class="z-card-title">Chinese</div>
+                <div class="z-card-desc">Noodles, dumplings, and more from the best Chinese kitchens.</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
