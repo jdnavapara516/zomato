@@ -3,32 +3,55 @@
 {% block title %}Zomato | Login{% endblock %}
 
 {% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="{% static 'userauth/css/login.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/footer.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/navbar.css' %}">
 
-
+<style>
+  .min-h-screen {
+    min-height: 61vh;
+}
+</style>
 
 {% endblock %}
 
 {% block content %}
-<div class="z-login-container">
-    <div class="z-login-title">Login to Zomato</div>
-    <form class="z-login-form" method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <div>
-            <label for="username">Username or Email</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="z-login-btn">Login</button>
-    </form>
-    <div class="z-login-extra">
+<div class="flex items-center justify-center" style="min-height: 61vh;">
+  <div
+      class="bg-white rounded-xl shadow-lg p-6 sm:p-8  max-w-md w-full"
+      style="box-shadow: 0 0 15px rgb(0 0 0 / 0.05)"
+    >
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-[#dc3545] mb-6 sm:mb-8 text-center">
+        Login to Zomato
+      </h1>
+      <form class="space-y-5 sm:space-y-6">
+        <label class="flex flex-col sm:flex-row sm:items-center sm:space-x-3 w-full">
+          <span class="text-base font-semibold mb-1 sm:mb-0 min-w-[140px]">Username or Email</span>
+          <input
+            type="text"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+          />
+        </label>
+        <label class="flex flex-col sm:flex-row sm:items-center sm:space-x-3 w-full">
+          <span class="text-base font-semibold mb-1 sm:mb-0 min-w-[140px]">Password</span>
+          <input
+            type="password"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+          />
+        </label>
+        <button
+          type="submit"
+          class="w-full bg-[#dc3545] text-white font-bold text-lg rounded-md py-3 mt-1"
+        >
+          Login
+        </button>
+      </form>
+<p class="text-center mt-6 text-base">
         Don't have an account?
-        <a href="{% url 'register' %}">Sign Up</a>
+        <a href="{% url 'register' %}" class="text-[#dc3545] font-semibold">Sign Up</a>
+      </p>
     </div>
 </div>
+<script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}

@@ -3,37 +3,77 @@
 {% block title %}Zomato | Sign Up{% endblock %}
 
 {% block extra_head %}
+<script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 <link rel="stylesheet" href="{% static 'userauth/css/register.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/footer.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/navbar.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="z-register-container">
-    <div class="z-register-title">Create your Zomato account</div>
-    <form class="z-register-form" method="post" action="{% url 'register' %}">
-        {% csrf_token %}
-        <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="password1">Password</label>
-            <input type="password" id="password1" name="password1" required>
-        </div>
-        <div>
-            <label for="password2">Confirm Password</label>
-            <input type="password" id="password2" name="password2" required>
-        </div>
-        <button type="submit" class="z-register-btn">Sign Up</button>
-    </form>
-    <div class="z-register-extra">
+<div class="flex items-center justify-center" style="min-height: 61vh;">
+  <div
+      class="bg-white rounded-xl shadow-lg p-8 mt-9 max-w-md w-full"
+      style="box-shadow: 0 0 15px rgb(0 0 0 / 0.05)"
+    >
+      <h1 class="text-3xl font-extrabold text-[#dc3545] mb-8 text-center">
+        Register to Zomato
+      </h1>
+      <form class="space-y-6">
+        <label class="flex items-center space-x-3 w-full">
+          <span class="text-base font-semibold min-w-[140px]">Full Name</span>
+          <input name="fullname"
+            type="text"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+            required
+          />
+        </label>
+        <label class="flex items-center space-x-3 w-full">
+          <span class="text-base font-semibold min-w-[140px]">Username or Email</span>
+          <input name="email"
+            type="email"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+            required
+          />
+        </label>
+        <label class="flex items-center space-x-3 w-full">
+          <span class="text-base font-semibold min-w-[140px]">Phone Number</span>
+          <input name="phone"
+            type="tel"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+            required
+          />
+        </label>
+        <label class="flex items-center space-x-3 w-full">
+          <span class="text-base font-semibold min-w-[140px]">Password</span>
+          <input
+            type="password" name="password1"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+            required
+          />
+        </label>
+        <label class="flex items-center space-x-3 w-full">
+          <span class="text-base font-semibold min-w-[140px]">Confirm Password</span>
+          <input name="password2"
+            type="password"
+            class="border border-gray-300 rounded-md px-3 py-2 flex-grow focus:outline-none focus:ring-2 focus:ring-[#dc3545]"
+            required
+          />
+        </label>
+        <button
+          type="submit"
+          class="w-full bg-[#dc3545] text-white font-bold text-lg rounded-md py-3 mt-1"
+        >
+          Register
+        </button>
+      </form>
+      <p class="text-center mt-6 text-base">
         Already have an account?
-        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'login' %}" class="text-[#dc3545] font-semibold">Login</a>
+      </p>
     </div>
 </div>
 {% endblock %}
